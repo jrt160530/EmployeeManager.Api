@@ -26,7 +26,7 @@ namespace EmployeeManager.Api.Controller
             return employeeRepository.SelectAll();
         }
 
-        [HttpGet("{id")]
+        [HttpGet("{id}")]
         public Employee Get(int id)
         {
             return employeeRepository.SelectByID(id);

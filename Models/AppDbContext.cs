@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,8 @@ namespace EmployeeManager.Api.Models
         {
         }
 
-        public virtual DbSet<Country> Countries { get; set; }
-        public virtual DbSet<Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Country> Countries { get; set; }
 
     }
 }

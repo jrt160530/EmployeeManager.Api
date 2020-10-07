@@ -28,8 +28,7 @@ namespace EmployeeManager.Api.Repositories
 
         public List<Employee> SelectAll()
         {
-            //List<Employee> data = db.Employees.FromSqlRaw("Select EmployeeID,FirstName,LastName,Title,BirthDate,HireDate, Country, Notes FROM Employees ORDER BY EmployeeID ASC").ToList();
-            List<Employee> data = db.Employees.FromSqlRaw("SELECT EmployeeID, " +
+             List<Employee> data = db.Employees.FromSqlRaw("SELECT EmployeeID, " +
                 "FirstName, LastName, Title, BirthDate, HireDate, Country, Notes " +
                 "FROM Employees ORDER BY EmployeeID ASC").ToList();
 

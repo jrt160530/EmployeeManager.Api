@@ -35,7 +35,7 @@ namespace EmployeeManager.Api
                    this.config.GetConnectionString("AppDb")));
 
            services.AddScoped<IEmployeeRepository, EmployeeSqlRepository>();
-            services.AddScoped<ICountryRepository, CountrySqlRepository>();
+           services.AddScoped<ICountryRepository, CountrySqlRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +46,7 @@ namespace EmployeeManager.Api
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseStaticFiles();
+            app.UseStaticFiles();
 
             app.UseRouting();
 
