@@ -36,6 +36,9 @@ namespace EmployeeManager.Api
 
            services.AddScoped<IEmployeeRepository, EmployeeSqlRepository>();
            services.AddScoped<ICountryRepository, CountrySqlRepository>();
+
+            //services.AddScoped<IEmployeeRepository, EmployeeStProcRepository>();
+            //services.AddScoped<ICountryRepository, CountryStProcRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +52,7 @@ namespace EmployeeManager.Api
             app.UseStaticFiles();
 
             app.UseRouting();
+          
 
             app.UseEndpoints(endpoints =>
             {
