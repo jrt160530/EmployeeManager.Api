@@ -22,8 +22,8 @@ namespace EmployeeManager.Api.Repositories
 
         public void Insert(Employee emp)
         {
-            int countr = db.Database.ExecuteSqlRaw("INSERT INTO Employees(FirstName, LastName, Title, BirthDate, HireDate, Country, Notes) VALUES({0}, {1}, {2},{3},{4},{5},{6}",
-                emp.FirstName, emp.LastName, emp.Title, emp.BirthDate, emp.HireDate, emp.Country, emp.Notes, emp.EmployeeID);
+            int count = db.Database.ExecuteSqlRaw("INSERT INTO Employees(FirstName, LastName, Title, BirthDate, HireDate, Country, Notes) VALUES({0}, {1}, {2},{3},{4},{5},{6})",
+                emp.FirstName, emp.LastName, emp.Title, emp.BirthDate, emp.HireDate, emp.Country, emp.Notes);
         }
 
         public List<Employee> SelectAll()
